@@ -34,12 +34,22 @@ settled if the call succeeds — failed calls cost nothing.
 
 ## Paying
 
+### Free trial
+
+`GET https://agentpay.agentpay-apis.workers.dev/credits/trial` returns an API key with $0.05 of free credit (one per network per day).
+Use it as `Authorization: Bearer <key>` on any endpoint or MCP server.
+
+### Pay by hand with Pera Wallet
+
+Open **https://agentpay.agentpay-apis.workers.dev/pay**, connect Pera, pick an endpoint (or buy credits), and approve the
+USDC payment in the app. Network fees are sponsored, so only USDC is needed.
+
 ### x402 (no account)
 
 Call any endpoint. You get `402 Payment Required` with a base64 `PAYMENT-REQUIRED` header (x402 v2) offering:
 
 - **Base** — `eip155:8453`, USDC `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`, exact scheme (EIP-3009)
-- **Algorand** — `algorand:wGHE2Pwdvd7S12BL5FaOP20EGYesN73k`, USDC ASA `31566704`, exact scheme
+- **Algorand** — `algorand:wGHE2Pwdvd7S12BL5FaOP20EGYesN73ktiC1qzkkit8=`, USDC ASA `31566704`, exact scheme, network fees sponsored by the GoPlausible facilitator (`extra.feePayer`)
 
 Any x402 v2 client handles this automatically:
 
