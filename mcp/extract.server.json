@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.noah-silver/agentpay-extract",
+  "title": "AgentPay Web Extract",
+  "description": "Pay-per-call web page to markdown, metadata and links for agents. x402 USDC on Base or Algorand.",
+  "version": "1.1.0",
+  "websiteUrl": "https://agentpay-extract.agentpay-apis.workers.dev",
+  "repository": {
+    "url": "https://github.com/noah-silver/agentpay",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://agentpay-extract.agentpay-apis.workers.dev/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. Bearer <credits API key> from /credits/buy. Omit to pay per call with x402 (USDC on Base or Algorand).",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

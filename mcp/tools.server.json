@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.noah-silver/agentpay-tools",
+  "title": "AgentPay Doc Tools",
+  "description": "Pay-per-call PDF to text, RSS/Atom to JSON, sitemap to URLs for agents. x402 USDC, Base/Algorand.",
+  "version": "1.1.0",
+  "websiteUrl": "https://agentpay-tools.agentpay-apis.workers.dev",
+  "repository": {
+    "url": "https://github.com/noah-silver/agentpay",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://agentpay-tools.agentpay-apis.workers.dev/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. Bearer <credits API key> from /credits/buy. Omit to pay per call with x402 (USDC on Base or Algorand).",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
