@@ -1,0 +1,11 @@
+{
+  "name": "agentpay",
+  "version": "1.1.0",
+  "description": "Pay-per-call web page to markdown, DNS/WHOIS/IP lookup and domain reports, and PDF/RSS/sitemap tools for agents (x402 USDC or prepaid credits).",
+  "mcpServers": {
+    "agentpay": {
+      "httpUrl": "https://agentpay.agentpay-apis.workers.dev/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}
